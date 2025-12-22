@@ -638,34 +638,129 @@ padding-bottom: 50px;
     padding: 0 50px;
 }
 
-@media (max-width:1199px)
-{
-    .aside{
-        left: -270px;
-    }
-    .main-content{
-        padding-left: 0;
-    }
-}
+
 
 .about .about-content .personal-info .info-item p span{
     display: block;
     margin-left: 0;
 }
 
-@media (max-width:991px)
-{
-    .project .project-item{
-        flex: 0 0 50%;
-        max-width: 50%;
+
+/* mobile resolution  */
+@media (max-width: 576px){
+
+    /* Remove sidebar */
+    .aside{
+        left: -270px;
     }
 
-    .home .home-info{
+    .main-content{
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    /* Home section */
+    .home-section{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .home-img{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .home-img img{
+        width: 70%;
+    }
+
+    /* About */
+    .about-content .personal-info{
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-    .home .home-img{
-        display: none;
+    .about-content .personal-info .info-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Skills */
+    .skill .skill-card{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Projects */
+    .row-con{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    /* Contact */
+    .contact .contact-info-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact .contact-form .col-6,
+    .contact .contact-form .col-12{
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
+
+
+/* tablet resolution  */
+@media (max-width: 768px){
+
+    .home-img{
+        display: none;
+    }
+
+    .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .skill .skill-card{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .row-con{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-content .personal-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* small laptop resolution  */
+
+@media (max-width: 992px){
+
+    .aside{
+        width: 220px;
+    }
+
+    .main-content{
+        margin-left: 220px;
+    }
+
+    .row-con{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
